@@ -24,10 +24,12 @@
 
             // Stampo a video il nome concatenato
             string concatenatedNameProduct1 = product1.ConcatenatedName();
-            Console.WriteLine($"Il nome concatenato del prodotto {product1.Name} è: ");
+            Console.Write($"Il nome concatenato del prodotto {product1.Name} è: ");
             Console.WriteLine(concatenatedNameProduct1);
 
+
             // PRODOTTO 2 ----------------
+
             // stampo a video il nome del prodotto, il suo codice e la sua descrizione
             Console.WriteLine($"Il nome del prodotto è: {product2.Name}");
             Console.WriteLine($"Il codice del prodotto {product2.Name} è: {product2.Code}");
@@ -43,8 +45,14 @@
 
             // Stampo a video il nome concatenato
             string concatenatedNameProduct2 = product2.ConcatenatedName();
-            Console.WriteLine($"Il nome concatenato del prodotto {product2.Name} è: ");
+            Console.Write($"Il nome concatenato del prodotto {product2.Name} è: ");
             Console.WriteLine(concatenatedNameProduct2);
+
+            // BONUS
+
+            // stampo a video il codice del prodotto con il pad left di 0 con 8 caratteri totali
+            string codeWithPadLeft = product1.NumberConverterForPadLeftWithZero();
+            Console.WriteLine($"Il codice del prodotto {product1} con il pad left è {codeWithPadLeft}");
         }
     }
 }

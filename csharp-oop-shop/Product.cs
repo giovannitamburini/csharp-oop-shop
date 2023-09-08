@@ -9,6 +9,17 @@ namespace csharp_oop_shop
     public class Product
     {
         // ATTRIBUTI
+
+        public int Code { get; private set; }
+
+        public string Name { get; set; } = "prodotto";
+
+        public string Description { get; set; } = "descrizione non disponibile";
+
+        public float Price { get; set; }
+
+        public float Vat { get; } = 0.22f;
+        /*
         private int code;
         public int Code
         {
@@ -64,6 +75,7 @@ namespace csharp_oop_shop
                 return vat;
             }
         }
+        */
 
         // STATI
 
@@ -72,7 +84,7 @@ namespace csharp_oop_shop
 
         public Product(string nameProduct, string descriptionproduct, float price)
         {
-            this.code = randomNumberGeneratorFrom1toN(100000000);
+            this.Code = randomNumberGeneratorFrom1toN(100000000);
             this.Name = nameProduct;
             this.Description = descriptionproduct;
             this.Price = price;
@@ -88,7 +100,7 @@ namespace csharp_oop_shop
         // METODI
 
         // metodo per creare un numero intero casuale
-        public int randomNumberGeneratorFrom1toN (int maxNumber)
+        private int randomNumberGeneratorFrom1toN (int maxNumber)
         {
             Random random = new Random();
             int randomNumber = random.Next(1, maxNumber);
@@ -117,6 +129,27 @@ namespace csharp_oop_shop
             string concatenatedName = codeForName + this.Name;
 
             return concatenatedName;
+        }
+
+        // BONUS
+        
+        // metodo per restituire un numero con un pad left di 0 per arrivare a 8 caratteri totali
+        public string NumberConverterForPadLeftWithZero()
+        {
+            string codeInString = this.Code.ToString();
+
+            if(codeInString.Length == 8)
+            {
+                return codeInString;
+            } else
+            {
+                codeInString = codeInString.PadLeft(8, '0');
+
+                //int codeWithPadLeft = int.Parse(codeInString);
+
+                //return codeWithPadLeft;
+                return codeInString;
+            }
         }
     }
 }
