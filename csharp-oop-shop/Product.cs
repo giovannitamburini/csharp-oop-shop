@@ -111,14 +111,14 @@ namespace csharp_oop_shop
         // metodo per stampare a video il prezzo senza iva
         public void PriceWithoutVat()
         {
-            Console.WriteLine($"Il prezzo del prodotto '{this.Name}' senza iva è di {Price} euro");
+            Console.WriteLine(Price);
         }
 
         // metodo per stampare a video il prezzo con iva
         public void PriceWithVat()
         {
             float priceWithVat = this.Price + (this.Price * this.Vat);
-            Console.WriteLine($"Il prezzo del prodotto '{this.Name}' con iva è di {priceWithVat} euro");
+            Console.WriteLine(priceWithVat);
         }
 
         // metodo per avere il nome esteso, ottenuto concatenando codice + nome
