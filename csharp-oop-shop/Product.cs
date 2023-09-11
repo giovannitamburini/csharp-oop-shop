@@ -10,15 +10,17 @@ namespace csharp_oop_shop
     {
         // ATTRIBUTI
 
+        // private set è governabile e settabile all'interno della classe ma non da fuori, non dall'utente
         public int Code { get; private set; }
 
-        public string Name { get; set; } = "prodotto";
+        public string Name { get; set; } = "nome prodotto non disponibile";
 
         public string Description { get; set; } = "descrizione non disponibile";
 
         public float Price { get; set; }
 
-        public float Vat { get; } = 0.22f;
+        //public float Vat { get; } = 0.22f;
+        public float Vat { get; }
         /*
         private int code;
         public int Code
@@ -84,10 +86,11 @@ namespace csharp_oop_shop
 
         public Product(string nameProduct, string descriptionproduct, float price)
         {
-            this.Code = randomNumberGeneratorFrom1toN(100000000);
+            this.Code = randomNumberGeneratorFrom1toN(99999999);
             this.Name = nameProduct;
             this.Description = descriptionproduct;
             this.Price = price;
+            this.Vat = 0.22f;
         }
 
 

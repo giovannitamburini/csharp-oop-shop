@@ -85,7 +85,6 @@
                 }
 
                 expectedProductsArray[i] = new Product(expectedProductName, expectedProductDescription, expectedProductPrice);
-
             }
 
 
@@ -93,7 +92,6 @@
             foreach (Product product in expectedProductsArray)
             {
                 int productIndex = 1;
-
 
                 Console.WriteLine($"Il {productIndex}° prodotto:");
                 Console.WriteLine(value: $"Nome: {product.Name}, Codice: {product.Code}, Descrizione: {product.Description}");
